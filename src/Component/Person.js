@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PersonElement from './PersonElement';
 import '../App.css';
+import AddPerson from './AddPerson';
+
 
 class Person extends Component{
 
@@ -23,14 +25,23 @@ render(){
 
     return (
         <div>
-          <table>
+            
+          <table className="table">
+              <thead>
               <tr>
                   <th>Name</th>
                   <th>job</th>
+                  <th>Remove</th>
               </tr>
-              {persondata}
+              </thead>
+              <tbody>
+                  
+              </tbody>
+              
+              
           </table>
-          
+            
+
         </div>
     )
 }
