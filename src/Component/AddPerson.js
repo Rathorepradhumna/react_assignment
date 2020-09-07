@@ -1,23 +1,38 @@
 import React from 'react' ; 
 
 const AddPerson =(props) =>{
-    return (
+  let name,job;
+  const changeNameHandler = (event) =>{
+    name = event.target.value;
+    console.log(name);
+  }
+
+  const changeJobHandler = (event) =>{
+    job = event.target.value;
+    console.log(job);
+  }
+
+ const AddPersonHandler = () =>{
+   console.log(name,job);
+    props.add(name,job);
+  }
+  return (
         <div>
             <h3>add new people</h3>
             <form>
   <div className="form-group">
     <label for="Name">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+    <input type="text" class="form-control" id="nameField" onChange={changeNameHandler}/>
     
   </div>
-  <div className="form-group">
+  <div className="form-group"> 
     <label for="Job">Job</label>
-    <input type="text" class="form-control" id="exampleInputPassword1"/>
+    <input type="text" class="form-control" id="nameFeild" onChange={changeJobHandler}/>
   </div>
   
-  <button type="submit" className="btn btn-primary">Submit</button>
+  <h6 onClick = {AddPersonHandler}>Submit</h6>
 </form>
-            
+             
             </div>
     )
 };
