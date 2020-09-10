@@ -1,15 +1,19 @@
-import React , {Component} from 'react';
-import logo from './logo.svg';
+import React , {Fragment} from 'react';
 import './App.css';
+import Calculator from './components/Calculator'
 
-class App extends Component {
- render() {
+const app =(props) => {
+
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <Fragment>
+        <Calculator>
+
+        </Calculator>
+      </Fragment>
     </div>
   );
- }
+ 
 }
 
-export default App;
+export default app;
